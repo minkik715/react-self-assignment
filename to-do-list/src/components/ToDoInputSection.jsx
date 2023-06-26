@@ -14,7 +14,7 @@ const TodoWrapper = styled.div`
 const Button = styled.button`
 `
 
-function ToDoInputSection({addToDo}) {
+function ToDoInputSection({size, addToDo}) {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
@@ -27,7 +27,7 @@ function ToDoInputSection({addToDo}) {
     }
 
     const handOnChange = () => {
-        addToDo({title, content, completed : false})
+        addToDo({id: size, title, content, completed : false})
         setTitle("")
         setContent("")
     }
